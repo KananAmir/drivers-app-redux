@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Favorite Derivers App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to start?
 
-## Available Scripts
+```
+npm install
+```
 
-In the project directory, you can run:
+```
+npm start
+```
 
-### `npm start`
+## How to run?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open http://localhost:3000 with your browser to see the result.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Used technologies:
 
-### `npm test`
+- Frontend: React Js -> Redux, Axios, React Router v-6, Styled Component, Ant Design
+- Git: GitHub
+- Hosting: Netlify
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Instructions:
 
-### `npm run build`
+You have 2 pages
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Page One - Drivers
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You get drivers from API and fill the table. Your table has 5 columns. ( Driver Name, Permanent Number, Nationality, DOB, Information)
+* When you click on the Information column, it will go to the driver's wikipedia address. You can look at the example in the API.
+* If the driver does not have  Permanent Number information, that raw have to be red.
+* Each row have an "add to favorite" button. When you click "add to favorite" button, you add the "driver object" to your favorite list.
+* You put your favorite list array in redux store. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Page Two - Favorites
+You list your favorite drivers here. 
+There is a remove from favorites button on each line. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Note:
+API has server side pagination. You should solve this problem in your table!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+Good Luck!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+API Link:
+http://ergast.com/api/f1/drivers 
