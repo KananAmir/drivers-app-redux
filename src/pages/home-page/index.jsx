@@ -1,9 +1,10 @@
-import { Button, notification, Table } from 'antd';
+import { Button, notification, Space, Table } from 'antd';
 import { Content } from 'antd/lib/layout/layout';
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import Loading from '../../components/loading';
 import { addToFavoritesAction, getAllDriversAction } from '../../redux/actions/drivers.action';
+import './index.scss'
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -76,13 +77,15 @@ const HomePage = () => {
   }
 
   return (
-    <div>
+    <div id='home-page'>
       {drivers.loading
         ?
         <Loading />
         :
         <Content style={{ padding: '0 100px' }}>
-          <Table columns={columns} dataSource={drivers.data?.MRData?.DriverTable.Drivers} rowKey='driverId' />
+          <Table columns={columns} dataSource={drivers.data?.MRData?.DriverTable.Drivers} rowKey='driverId'
+            rowClassName={(record, index) => record.permanentNumber ? 'row-bg' : ''}
+          />
         </Content>
       }
 
