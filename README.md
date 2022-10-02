@@ -16,7 +16,7 @@ Open http://localhost:3000 with your browser to see the result.
 
 ## Used technologies:
 
-- Frontend: React Js -> Redux, Axios, React Router v-6, Styled Component, Ant Design
+- Frontend: React Js -> Redux, Redux Thunk, Axios, React Router v-6, Ant Design
 - Git: GitHub
 - Hosting: Netlify
 
@@ -33,19 +33,12 @@ You get drivers from API and fill the table. Your table has 5 columns. ( Driver 
 * You put your favorite list array in redux store. 
 
 
-
-
 Page Two - Favorites
 You list your favorite drivers here. 
 There is a remove from favorites button on each line. 
 
 Note:
 API has server side pagination. You should solve this problem in your table!
-
-
-Good Luck!
-
-
 
 API Link:
 http://ergast.com/api/f1/drivers 
