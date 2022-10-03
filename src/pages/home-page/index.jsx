@@ -83,8 +83,11 @@ const HomePage = () => {
         <Loading />
         :
         <Content style={{ padding: '0 100px' }}>
-          <Table columns={columns} dataSource={drivers.data?.MRData?.DriverTable.Drivers} rowKey='driverId'
-            rowClassName={(record, index) => record.permanentNumber ? 'row-bg' : ''}
+          <Table
+            columns={columns}
+            dataSource={drivers.data?.MRData?.DriverTable.Drivers}
+            rowKey='driverId'
+            rowClassName={(record, index) => !record.permanentNumber ? 'row-bg' : ''}
           />
         </Content>
       }
