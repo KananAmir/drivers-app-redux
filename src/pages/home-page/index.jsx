@@ -15,6 +15,9 @@ const HomePage = () => {
     dispatch(getAllDriversAction())
   }, [dispatch])
 
+  const onPageChange = () => {
+    // dispatch(getAllDriversAction())
+  }
   const columns = [
     {
       title: 'Driver Id',
@@ -88,6 +91,11 @@ const HomePage = () => {
             dataSource={drivers.data?.MRData?.DriverTable.Drivers}
             rowKey='driverId'
             rowClassName={(record, index) => !record.permanentNumber ? 'row-bg' : ''}
+            pagination={{
+              // pageSize: 5,
+              // total: total,
+              onChange: onPageChange
+            }}
           />
         </Content>
       }

@@ -1,6 +1,6 @@
 import axios from "axios"
 
-let baseUrl = 'http://ergast.com/api/f1/drivers.json';
+let baseUrl = 'https://ergast.com/api/f1/drivers.json';
 
 export const getAllDriversAction = () => {
     return async (dispatch) => {
