@@ -1,13 +1,13 @@
 import axios from "axios"
 
-let baseUrl = 'https://ergast.com/api/f1/drivers.json';
+let baseUrl = `https://ergast.com/api/f1/drivers.json`;
 
 export const getAllDriversAction = () => {
     return async (dispatch) => {
         dispatch({
             type: 'GET_DRIVERS_START',
         })
-        axios.get(baseUrl)
+        axios.get(`${baseUrl}?limit=855&offset=10`)
             .then(result =>
                 dispatch({
                     type: 'GET_DRIVERS_SUCCESS',
